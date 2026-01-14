@@ -1,0 +1,67 @@
+﻿services:
+  # ========================
+  # REDIS
+  # ========================
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  # ========================
+  # RABBITMQ
+  # ========================
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: always
+
+  # ========================
+  # API
+  # ========================
+  demoperformance-api:
+    build:
+      context: .
+      dockerfile: DemoPerformanceWithRedisAndRabbitMQ.Api/Dockerfile
+    container_name: demoperformance-api
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      Redis__ConnectionString: redis:6379
+      RabbitMQ__Host: rabbitmq
+    depends_on:
+      - redis
+      - rabbitmq
+    restart: always
+
+  # ========================
+  # WORKER
+  # ========================
+  demoperformance-worker:
+    build:
+      context: .
+      dockerfile: DemoPerformanceWithRedisAndRabbitMQ.Worker/Dockerfile
+    container_name: demoperformance-worker
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Redis__ConnectionString: redis:6379
+      RabbitMQ__Host: rabbitmq
+    depends_on:
+      - redis
+      - rabbitmq
+    restart: always
+
+volumes:
+  rabbitmq_data:
+    driver: local

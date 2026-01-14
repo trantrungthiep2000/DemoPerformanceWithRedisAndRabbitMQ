@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPerformanceWithRedisAndRabbitMQ.Share", "DemoPerformanceWithRedisAndRabbitMQ.Share\DemoPerformanceWithRedisAndRabbitMQ.Share.csproj", "{5A325AF3-7D25-4CAC-9995-939661115A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPerformanceWithRedisAndRabbitMQ.Api", "DemoPerformanceWithRedisAndRabbitMQ.Api\DemoPerformanceWithRedisAndRabbitMQ.Api.csproj", "{A286E177-325C-4CC3-92C1-CFB5D2452FBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPerformanceWithRedisAndRabbitMQ.DAL", "DemoPerformanceWithRedisAndRabbitMQ.DAL\DemoPerformanceWithRedisAndRabbitMQ.DAL.csproj", "{670BD00D-8F96-4AD0-8C6B-209C54D850B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPerformanceWithRedisAndRabbitMQ.Worker", "DemoPerformanceWithRedisAndRabbitMQ.Worker\DemoPerformanceWithRedisAndRabbitMQ.Worker.csproj", "{8F5228CC-40B8-41DA-9657-1E4A2F7C6BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPerformanceWithRedisAndRabbitMQ.Bussiness", "DemoPerformanceWithRedisAndRabbitMQ.Bussiness\DemoPerformanceWithRedisAndRabbitMQ.Bussiness.csproj", "{6263A7D8-83BA-4C47-9046-A118EF8DEB17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A325AF3-7D25-4CAC-9995-939661115A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A325AF3-7D25-4CAC-9995-939661115A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A325AF3-7D25-4CAC-9995-939661115A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A325AF3-7D25-4CAC-9995-939661115A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A286E177-325C-4CC3-92C1-CFB5D2452FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A286E177-325C-4CC3-92C1-CFB5D2452FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A286E177-325C-4CC3-92C1-CFB5D2452FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A286E177-325C-4CC3-92C1-CFB5D2452FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670BD00D-8F96-4AD0-8C6B-209C54D850B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670BD00D-8F96-4AD0-8C6B-209C54D850B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670BD00D-8F96-4AD0-8C6B-209C54D850B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670BD00D-8F96-4AD0-8C6B-209C54D850B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5228CC-40B8-41DA-9657-1E4A2F7C6BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5228CC-40B8-41DA-9657-1E4A2F7C6BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5228CC-40B8-41DA-9657-1E4A2F7C6BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5228CC-40B8-41DA-9657-1E4A2F7C6BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6263A7D8-83BA-4C47-9046-A118EF8DEB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6263A7D8-83BA-4C47-9046-A118EF8DEB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6263A7D8-83BA-4C47-9046-A118EF8DEB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6263A7D8-83BA-4C47-9046-A118EF8DEB17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB7ECC75-B8CF-45EB-A43E-CB4913363888}
+	EndGlobalSection
+EndGlobal
