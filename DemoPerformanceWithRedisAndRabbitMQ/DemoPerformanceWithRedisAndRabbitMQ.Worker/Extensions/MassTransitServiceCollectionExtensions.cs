@@ -23,7 +23,7 @@ namespace DemoPerformanceWithRedisAndRabbitMQ.Worker.Extensions
 
                 x.UsingRabbitMq((context, cfg) =>
                 {
-                    cfg.Host("rabbitmq", "/", h =>
+                    cfg.Host("rabbitmq://localhost", h =>
                     {
                         h.Username("guest");
                         h.Password("guest");

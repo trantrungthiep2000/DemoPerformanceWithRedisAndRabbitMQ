@@ -62,7 +62,7 @@ namespace DemoPerformanceWithRedisAndRabbitMQ.Bussiness.Services
         /// <returns></returns>
         public async Task<User> GetUserByIdAsync(long id)
         {
-            var key = $"user:{id}";
+            var key = $"{Constants.USER}:{id}";
 
             // Get from cache
             var cachedUsers = await _redis.StringGetAsync(key);

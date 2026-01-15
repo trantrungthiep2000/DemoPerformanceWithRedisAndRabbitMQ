@@ -10,11 +10,11 @@ namespace DemoPerformanceWithRedisAndRabbitMQ.DAL.Repositories
     /// </summary>
     public class ProcessedEventRepository : IProcessedEventRepository
     {
-        private readonly AppDbContext _db;
+        private readonly AppDbContext _dbContext;
 
-        public ProcessedEventRepository(AppDbContext db)
+        public ProcessedEventRepository(AppDbContext dbContext)
         {
-            _db = db;
+            _dbContext = dbContext;
         }
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace DemoPerformanceWithRedisAndRabbitMQ.DAL.Repositories
         /// </summary>
         /// <param name="eventId"></param>
         /// <returns></returns>
-        public async Task<bool> IsProcessedAsync(Guid eventId) => await _db.ProcessedEvents.AnyAsync(x => x.EventId == eventId);
+        public async Task<bool> IsProcessedAsync(Guid eventId) => await _dbContext.ProcessedEvents.AnyAsync(x => x.EventId == eventId);
 
         /// <summary>
         /// Mark event as processed.
@@ -31,7 +31,7 @@ namespace DemoPerformanceWithRedisAndRabbitMQ.DAL.Repositories
         /// <returns></returns>
         public async Task MarkProcessedAsync(Guid eventId)
         {
-            await _db.ProcessedEvents.AddAsync(new ProcessedEvent { EventId = eventId });
+            await _dbContext.ProcessedEvents.AddAsync(new ProcessedEvent { EventId = eventId });
         }
     }
 }

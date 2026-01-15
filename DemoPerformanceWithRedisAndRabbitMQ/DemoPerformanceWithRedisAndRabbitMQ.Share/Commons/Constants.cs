@@ -7,5 +7,6 @@
     {
 
         public const string USER_LIST_KEY = "users:all";
+        public const string USER = "user";
     }
 }
